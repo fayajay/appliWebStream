@@ -40,9 +40,10 @@ public class ConnexionServlet extends HttpServlet {
         Utilisateur u = new UtilisateurService().connexion(identifiant, login);
         
         // je suis logué correctement
-        resp.addCookie(new Cookie("identifiant", identifiant));
-        resp.addCookie(new Cookie ("login",login));
-        resp.addCookie(new Cookie("utilType",u.getUtilType().toString()));
+        req.getSession().setAttribute("utilConnecte", u);
+        
+        
+        
         
         
         

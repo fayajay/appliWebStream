@@ -7,6 +7,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
         <c:import url="_STYLESHEET.jsp"/>
+        
     </head>
     <body>
         <div class="titre">
@@ -17,7 +18,7 @@
         </div>
         <div class="contenu">
             
-            Choisissez votre fond d'écran : <input type="submit" name="fond1" value="Fond n°1"/><input type="submit" name="fond2" value="Fond n°2"/>
+            Choisissez votre fond d'écran : <a href="changeImage?style=style1">Style1</a>//<a href="changeImage?style=style2">Style2</a>
             <h2>Liste des films</h2>
             
                 <table>

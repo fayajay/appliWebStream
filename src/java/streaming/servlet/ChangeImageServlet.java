@@ -18,17 +18,17 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author admin
  */
-@WebServlet(name = "DeconnexionServlet", urlPatterns = {"/deconnexion"})
-public class DeconnexionServlet extends HttpServlet {
+@WebServlet(name = "ChangeImageServlet", urlPatterns = {"/changeImage"})
+public class ChangeImageServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        
-     req.getSession().removeAttribute("utilConnecte");
-        
-        resp.sendRedirect("home");
+
+        String style = req.getParameter("style");
+
+        resp.addCookie(new Cookie("changeImage", style));
+
+        resp.sendRedirect("films_lister");
     }
-
-
 
 }

@@ -11,18 +11,10 @@
 <link href='https://fonts.googleapis.com/css?family=Creepster' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Nosifer' rel='stylesheet' type='text/css'>
 <link href="CSS/style1.css" rel="stylesheet" type="text/css"/>
-<link href="CSS/style2.css" rel="stylesheet" type="text/css"/>
 
-<c:choose>
-    <c:when test="${cookie.changeImage.getName()=='fond1'}">
-        <c:import url="/css/style1.css"/>
-    </c:when>
-    <c:when test="${cookie.changeImage.getName()=='fond2'}">
-        <c:import url="/css/style2.css"/>
-    </c:when>
-    <c:otherwise>
-        <c:import url="/css/style1.css"/>
-    </c:otherwise>
-</c:choose>
+
+
+
+
 
 

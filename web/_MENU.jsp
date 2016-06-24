@@ -11,6 +11,6 @@
 <a class="menu" href="serie_lister">Séries</a>
 <a class="menu" href="form">Ajouter film</a>
 <a class="menu" href="form_serie">Ajouter Série</a>
-<c:if test="${cookie.identifiant!=null}">
+<c:if test="${utilConnecte.identifiant!=null}">
                 <a href="deconnexion">Déconnexion</a>
             </c:if>

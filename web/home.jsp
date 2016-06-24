@@ -21,16 +21,16 @@
         <div class="menu">
             
             <!-- méthode 1-->
-            <c:if test="${cookie.identifiant==null}">
+            <c:if test="${utilConnecte.identifiant==null}">
                 <a class="menu" href="connexion">Connexion</a>
             </c:if>
-            <c:if test="${cookie.identifiant!=null}">
+            <c:if test="${utilConnecte.identifiant!=null}">
                 <a href="deconnexion">Déconnexion</a>
             </c:if>
 
             <!-- méthode 2-->   
             <c:choose>
-                <c:when test="${cookie.identifiant==null}">
+                <c:when test="${utilConnecte.identifiant==null}">
                     <a href="connexion">Connexion</a>
                 </c:when>
                 <c:otherwise>
@@ -41,10 +41,10 @@
             <a class="menu" href="inscription">Inscription</a>
         </div>
         <div class="contenu">
-            <img src="img/jason2.jpg" width=400 height=400/>
-            <img src="img/chucky.jpg" width=400 height=400/>
-            <img src="img/freddy.jpg" width=400 height=400/>
-            <img src="img/jasonGif.gif" width=400 height=400/>
+            <a class="img" href="#"><img src="CSS/img/jason2.jpg" width=400 height=400/></a>
+            <a class="img" href="#"><img src="CSS/img/chucky.jpg" width=400 height=400/></a>
+            <a class="img" href="#"><img src="CSS/img/freddy.jpg" width=400 height=400/></a>
+            <a class="img" href="#"><img src="CSS/img/jasonGif.gif" width=400 height=400/></a>
         </div>
         <div class="pied">
             <c:import url="_PIED.jsp"/>

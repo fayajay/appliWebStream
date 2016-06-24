@@ -37,14 +37,4 @@ public class ListerFilmsServlet extends HttpServlet {
         req.getRequestDispatcher("film_list.jsp").forward(req, resp);
     }
 
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        
-        resp.addCookie(new Cookie("changeImage", req.getParameter("fond1")));
-        resp.addCookie(new Cookie("changeImage", req.getParameter("fond2")));
-        
-        resp.sendRedirect("films_lister");
-    }
-
-    
 }
